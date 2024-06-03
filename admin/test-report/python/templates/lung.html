@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lung Cancer Test detection</title>
+<link rel="stylesheet" href="static/form.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<style>
+
+
+#image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px auto;
+}
+
+#upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#upload-btn-wrapper .btn {
+    border: 2px solid rgb(249, 243, 243);
+    color: rgb(255, 150, 150);
+    background-color: #000;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#upload-btn-wrapper .btn:hover {
+    background-color: #e10e0e;
+}
+.container .img-pre{
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid red; */
+    margin: 10px;
+    overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>Upload Your Lung Cancer Mri Image</header>
+<form action="/predict_model2" method="post" enctype="multipart/form-data">
+<div id="btn btn-primary">
+
+<label for="imageUpload" class="btn">Choose an image file</label>
+<input class="form-control" type="file" name="image" id="imageUpload" required>
+</div>
+<div class="img-pre">
+<img id="image-preview" src="" alt="Uploaded Image" />
+</div>
+<div id="upload-btn-wrapper">
+<button type="submit" class="btn btn-primary">Submit</button>   
+</div>
+</form>
+</div>
+<div class="form second">
+<div class="details address">
+
+
+<div class="fields">
+    <div class="input-field">
+        <div class="container mt-3">
+            {% if result %}
+            <h4>Result: <span id="result">{{ result }}</span></h4>
+            {% endif %}
+            
+                {% if result == "Large Cell Carninoma" %}
+                <h2>Precaution must observe for you:</h2>
+                <ul>
+                    <li>Quit smoking.</li>
+                    <li>Avoid secondhand smoke.</li>
+                    <li>Protect yourself from toxic chemicals at work.</li>
+                </ul>
+                <h2>Necessary Medications:</h2>
+                <ul>
+                    <li>Chemotherapy</li>
+                    <li>Radiation therapy</li>
+                    <li>Targeted therapy</li>
+                    <li>Combinations of 2 chemo drugs to treat early-stage.</li>
+                </ul>
+                <h2>Requied Medical Reports:</h2>
+                <ul>
+                    <li>For early stages The tumor is found only in the top layers of cells lining the air passages, but it has not invaded deeper into other lung tissues (Tis).</li>
+                    <li>Stage 2 and other stages lung cancer is when small tumors are contained within the lungs and have not metastasized (spread) to nearby or distant organs or tissue.</li>
+                </ul>
+                <b>"Please consult with our healthcare professional In your city".</b>
+                <b>"Don't Worry Everything will be healthy and kessp smiling".</b>
+                {% endif %}
+
+                
+                {% if result == "Adenocarcinoma" %}
+                <h2>Precaution must observe for you:</h2>
+                <ul>
+                    <li>Quit smoking.</li>
+                    <li>Avoid secondhand smoke.</li>
+                    <li>Protect yourself from toxic chemicals at work.</li>
+                    <li>Get your home tested for radon.</li>
+                </ul>
+                <h2>Necessary Medications:</h2>
+                <ul>
+                    <li>Treatment of stage 2 lung cancer</li>
+                    <li>Immunotherapy (along chemotherapy)</li>
+                    <li>Radiation therapy</li>
+                    <li>Targeted therapy</li>
+                    <li>Combinations of 2 chemo drugs to treat early-stage.</li>
+                </ul>
+                <h2>Requied Medical Reports:</h2>
+                <ul>
+                    <li>Regular health checkups with additional tests to monitor the function of the left ventricle.</li>
+                    <li>Stage 2 and other stages lung cancer is when small tumors are contained within the lungs and have not metastasized (spread) to nearby or distant organs or tissue.
+                        Please consult with our healthcare professional In your city.</li>
+                </ul>
+                <b>"Please consult with our healthcare professional In your city".</b>
+                <b>"Don't Worry Everything will be healthy and kessp smiling".</b>
+                {% endif %}
+                
+<!-- if result id Squamous Carninoma -->
+            
+                {% if result == "Squamous Carninoma" %}
+                <h2>Precaution must observe for you:</h2>
+                <ul>
+                    <li>Quit smoking.</li>
+                    <li>Avoid secondhand smoke.</li>
+                    <li>Protect yourself from toxic chemicals at work.</li>
+                </ul>
+                <h2>Necessary Medications:</h2>
+                <ul>
+                    <li>Chemotherapy</li>
+                    <li>Radiation therapy</li>
+                    <li>Targeted therapy</li>
+                    <li>Combinations of 2 chemo drugs to treat early-stage.</li>
+                </ul>
+                <h2>Requied Medical Reports:</h2>
+                <ul>
+                    <li>For early stages The tumor is found only in the top layers of cells lining the air passages, but it has not invaded deeper into other lung tissues (Tis).</li>
+                    <li>Stage 2 and other stages lung cancer is when small tumors are contained within the lungs and have not metastasized (spread) to nearby or distant organs or tissue.</li>
+                </ul>
+                <b>"Please consult with our healthcare professional In your city".</b>
+                <b>"Don't Worry Everything will be healthy and kessp smiling".</b> -->
+                {% endif %}
+           
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--new input  -->
+    
+
+
+
+
+<script src="static/script.js"></script>
+<script>
+const imageInput = document.getElementById("imageUpload");
+const imagePreview = document.getElementById("image-preview");
+
+imageInput.addEventListener("change", function () {
+    const file = imageInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.src = "";
+    }
+});
+</script>
+</body>
+</html>

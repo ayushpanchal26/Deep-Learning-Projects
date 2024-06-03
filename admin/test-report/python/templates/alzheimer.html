@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer's disease  detection</title>
+    <link rel="stylesheet" href="static/form.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+       
+        
+        #image-preview {
+            max-width: 100%;
+            max-height: 300px;
+            margin: 20px auto;
+        }
+
+        #upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        #upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        #upload-btn-wrapper .btn {
+            border: 2px solid rgb(249, 243, 243);
+            color: rgb(255, 150, 150);
+            background-color: #000;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #upload-btn-wrapper .btn:hover {
+            background-color: #e10e0e;
+        }
+       .container .img-pre{
+            width: 300px;
+            height: 300px;
+            /* border: 2px solid red; */
+            margin: 10px;
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Upload Alzheimer's disease  Mri Image</header>
+    <form action="/alzhiemerfnc" method="post" enctype="multipart/form-data">
+    <div id="btn btn-primary">
+        
+        <label for="imageUpload" class="btn">Choose an image file</label>
+        <input class="form-control" type="file" name="image" id="imageUpload" required>
+    </div>
+    <div class="img-pre">
+    <img id="image-preview" src="" alt="Uploaded Image" />
+</div>
+<div id="upload-btn-wrapper">
+<button type="submit" class="btn btn-primary">Submit</button>   
+</div>
+</form>
+</div>
+<div class="form second">
+    <div class="details address">
+        
+
+        <div class="fields">
+            <div class="input-field">
+                <div class="container mt-3">
+                    {% if result %}
+                    <h4>Result: <span id="result">{{ result }}</span></h4>
+                    {% endif %}
+                
+                <div>
+                    <div>
+                        {% if result == 'very mild' %}
+                        <h2>Precaution must observe for you:</h2>
+                        <ul>
+                            <li>Remove or secure items that could be dangerous</li>
+                            <li>Install safety devices such as smoke and carbon monoxide detectors</li>
+                            <li>Remove unstable rugs, extension cords, etc. that may cause your loved one to trip or fall.</li>
+                            <li>Adjust locks on the outside of the home to discourage wandering.</li>
+                            <li>Keep walkways well-lit and clear from things that could cause tripping.</li>
+                        </ul>
+                        <h2>Necessary Medications:</h2>
+                        <ul>
+                            <li>Donepezil(Aricept)</li>
+                            <li>Rivastigmine(Exelon)</li>
+                        </ul>
+                        <h2>Medical Reports:</h2>
+                        <p>Please consult with our healthcare professional In your city.</p>
+                        <ul>
+                            <li>Medical history</li>
+                            <li>Physical examination</li>
+                            <li>Neurological examination</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div>
+    </div>
+ </div>
+ </div>
+</div>
+<!-- new section below section -->
+
+
+    </div>
+</div>
+
+
+        <script src="static/script.js"></script>
+    <script>
+        const imageInput = document.getElementById("imageUpload");
+        const imagePreview = document.getElementById("image-preview");
+
+        imageInput.addEventListener("change", function () {
+            const file = imageInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.src = "";
+            }
+        });
+    </script>
+</body>
+</html>

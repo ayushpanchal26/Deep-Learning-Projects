@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Heart Disease Predictor </title>
+</head>
+<body>
+    <div class="container">
+        <header>Heart Disease Predictor</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Patient test Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="text" placeholder="age(in )" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>sex</label>
+                            <input type="text" placeholder="sex (1 = Male; 0 = Female)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Chest Pain Type</label>
+                            <input type="text" placeholder="Chest Pain Type (in mmHg)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Resting Blood Pressure (in mm Hg)</label>
+                            <input type="text" placeholder="Resting Blood Pressure (in mm Hg) " required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Serum Cholesterol  </label>
+                            <input type="text" placeholder="Serum Cholesterol (in mg/dl)  (in µU/ml) " required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fasting Blood Sugar</label>
+                            <input type="text" placeholder="Fasting Blood Sugar(> 120 mg/dl (1 = True; 0 = False))" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Resting Electrocardiograph Result</label>
+                            <input type="text" placeholder="Enter Resting Electrocardiograph Result" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>thalach </label>
+                            <input type="text" placeholder="Maximum Heart Rate Achieved" required>
+                        </div>
+                        <div class="input-field">
+                            <label>exang </label>
+                            <input type="text" placeholder="Exercise Induced Angina (1 = Yes; 0 = No)" required>
+                        </div>
+                        <div class="input-field">
+                            <label>oldpeak </label>
+                            <input type="text" placeholder="ST Depression Induced by Exercise Relative to Rest" required>
+                        </div>
+                        <div class="input-field">
+                            <label>slope </label>
+                            <input type="text" placeholder="The Slope of the Peak Exercise ST Segment"" required>
+                        </div>
+                        <div class="input-field">
+                            <label>CA </label>
+                            <input type="text" placeholder="Number of Major Vessels (0-3) Colored by Fluoroscopy" required>
+                        </div>
+                        </div>
+                        
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

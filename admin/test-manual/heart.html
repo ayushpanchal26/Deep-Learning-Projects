@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Heart Disease Predictor </title>
+</head>
+<body>
+    <div class="container">
+        <header>Heart Disease Predictor</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Patient test Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>sex</label>
+                            <input type="text" name="gender" placeholder="sex (1 = Male; 0 = Female)" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="text" placeholder="age(in )" required>
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Education</label>
+                            <input type="text" name="education" placeholder="Highest education" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Current Smoker</label>
+                            <input type="text" name="currentSmoker" placeholder="Current Smoker (in mmHg)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Cigerate per day</label>
+                            <input type="text" name="cigsPerDay" placeholder="Cigerate per day " required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Blood Pressure Medications </label>
+                            <input type="text" name="BPMeds" placeholder="Blood Pressure Medications " required>
+                        </div>
+                        <div class="input-field">
+                            <label>Prevalence of stroke</label>
+                            <input type="text" name="prevalentStroke" placeholder="Prevalence of stroke" required>
+                        </div>
+                    </div>
+                  
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                    </div>
+                    </div>
+
+                    <div class="form second">
+                        <div class="details address">
+                        <div class="fields">
+                        <div class="input-field">
+                            <label>prevalentHyp</label>
+                            <input type="text" name="prevalentHyp" placeholder="Enter prevalentHyp" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Diabetes </label>
+                            <input type="text" name="diabetes" placeholder="Diabetes" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Total cholesterol </label>
+                            <input type="text" name="totChol" placeholder=" Total cholesterol" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Systolic Blood Pressure.(sysBP) </label>
+                            <input type="text" name="sysBP" placeholder="Systolic Blood Pressure.(sysBP) " required>
+                        </div>
+                        <div class="input-field">
+                            <label>Diastolic Blood Pressure (diaBP) </label>
+                            <input type="text" name="diaBP" placeholder="Diastolic Blood Pressure (diaBP)" required>
+                        </div>
+                        <div class="input-field">
+                            <label>BMI </label>
+                            <input type="text" name="BMI" placeholder="BMI" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Heart Rate </label>
+                            <input type="text" name="heartRate" placeholder="heartRate" required>
+                        </div>
+                        <div class="input-field">
+                            <label> Gluecose Level </label>
+                            <input type="text" name="glucose" placeholder="gluecoe level" required>
+                        </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

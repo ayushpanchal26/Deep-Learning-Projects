@@ -1,0 +1,6 @@
+[Pregnancies,	Glucose	BloodPressure,	SkinThickness,	Insulin,	BMI, DiabetesPedigreeFunction,	Age,	Outcome]
+[6,148.0, 72.0, 35.0, 28.0, 33.6, 0.627, 50, 1]
+[1, 85.0, 66.0, 29.0, NaN, 26.6, 0.351, 31, 0]
+[8, 183.0, 64.0, NaN, NaN, 23.3, 0.672, 32, 1]
+[1, 89.0, 66.0, 23.0, 94.0, 28.1, 0.167, 21, 0]
+[0, 137.0, 40.0, 35.0, 168.0, 43.1, 2.288, 33, 1]

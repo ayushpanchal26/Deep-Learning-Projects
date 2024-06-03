@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Breast Cancer Predictor </title>
+</head>
+<body>
+    <div class="container">
+        <header>Breast Cancer Predictor</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Texture Mean</label>
+                            <input type="text" placeholder="Texture Mean" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Smoothness Mean</label>
+                            <input type="text" placeholder="Smoothness Mean" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Compactness Mean</label>
+                            <input type="text" placeholder="Compactness Mean" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Concave Points Mean</label>
+                            <input type="text" placeholder="Concave Points Mean" required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Symmetry Mean</label>
+                            <input type="text" placeholder="Symmetry Mean" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Fractal Dimension Mean</label>
+                            <input type="text" placeholder="Fractal Dimension Mean" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Texture Standard Error</label>
+                            <input type="text" placeholder="Enter Texture Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Area Standard Error</label>
+                            <input type="text" placeholder="Enter Area Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Smoothness Standard Error</label>
+                            <input type="text" placeholder="Enter Smoothness Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Compactness Standard Error</label>
+                            <input type="text" placeholder="Enter Compactness Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Concavity Standard Error</label>
+                            <input type="text" placeholder="Enter your Concavity Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Symmetry Standard Error</label>
+                            <input type="text" placeholder="Enter Symmetry Standard Error" required>
+                        </div>
+                       
+                        
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Fractal Dimension Standard Error</label>
+                            <input type="text" placeholder="Fractal Dimension Standard Error" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Texture Worst</label>
+                            <input type="text" placeholder="Enter Texture Worst" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Area Worst</label>
+                            <input type="text" placeholder="Enter your Area Worst" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Smoothness Worst</label>
+                            <input type="text" placeholder="Enter Smoothness Worst" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Compactness Worst</label>
+                            <input type="text" placeholder="Enter Compactness Worst" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Concavity Worst</label>
+                            <input type="text" placeholder="Enter Concavity Worst" required>
+                        </div>
+                    </div>
+                
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Symmetry Worst</label>
+                            <input type="text" placeholder="Enter Symmetry Worst" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Fractal Dimension Worst</label>
+                            <input type="text" placeholder="Enter Fractal Dimension Worst" required>
+                        </div>
+                        </div>
+                        
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

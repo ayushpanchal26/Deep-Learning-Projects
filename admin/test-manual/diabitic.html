@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Diabetic Predictor </title>
+</head>
+<body>
+    <div class="container">
+        <header> Disease Predictor</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Patient test Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <input type="text" name="gender" placeholder="gender ( Male;  Female)" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="text" name="age" placeholder="age(in years)" required>
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Hypertension</label>
+                            <input type="text" name="hypertension" placeholder="hypertension (in mmHg)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Resting Blood Pressure (in mm Hg)</label>
+                            <input type="text" placeholder="Resting Blood Pressure (in mm Hg) " required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Heart disease  </label>
+                            <input type="text" name="heart_disease" placeholder="heart_disease " required>
+                        </div>
+                        <div class="input-field">
+                            <label>Bmi</label>
+                            <input type="text" name="bmi" placeholder="bmi(> 120 mg/dl (1 = True; 0 = False))" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>HbA1c_level</label>
+                            <input type="text" name=",HbA1c_leve" placeholder="Enter Hemoglobin A1C test Result" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Blood glucose level </label>
+                            <input type="text" name="blood_glucose_level" placeholder="blood_glucose_level"  required>
+                        </div>
+                        
+                        
+                        </div>
+                        
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

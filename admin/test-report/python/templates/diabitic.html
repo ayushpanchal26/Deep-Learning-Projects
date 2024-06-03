@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="static/form.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Diabetes Predictor </title>
+</head>
+<body>
+    <div class="container">
+        <header>Diabetes Predictor</header>
+
+        <form action="/DiabetesFunc" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Patient test Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <input type="text" name="gender" placeholder="Gender(0= female 1=male)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="age">Age</label>
+                            <input type="text" name="age" placeholder="Age ( in years) " required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="hypertension">Hypertension</label>
+                            <input type="text" name="hypertension" placeholder="Hypertension (in mmHg)" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="heart_disease" >heart_disease</label>
+                            <input type="text" name="heart_disease" placeholder="heart_disease" required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label for="bmi">BMI </label>
+                            <input type="text" name="bmi" placeholder="BMI (> 120 mg/dl - 1 = True; 0 = False) " required>
+                        </div>
+                        <div class="input-field">
+                            <label for="HbA1c_level">HbA1c Level</label>
+                            <input type="text"  name="HbA1c_level"           placeholder="Enter Hemoglobin A1C test result" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="blood_glucose_level">Blood Glucose Level</label>
+                            <input type="text" name="blood_glucose_level" placeholder="Blood Glucose Level" required>
+                        </div>
+
+                        
+                        </div>
+                        
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+         
+            </div>
+            
+        </form>
+    </div>
+    <div class="form second">
+        <div class="details address">
+            
+
+            <div class="fields">
+                <div class="input-field">
+                    <div class="container mt-3">
+                        {% if val %}
+                        <h4>Result: <span id="result">{{ val }}</span></h4>
+                        {% endif %}
+                        <div class="Precaution">
+                            <div>
+                                {% if val == 'Diabetes' %}
+                                <h2>Precaution must observe for you:</h2>
+                                <ul>
+                                    <li>Eat healthy diet</li>
+                                    <li>Increasing Physical activity</li>
+                                    <li>Quit Smoking if you are smoking</li>
+                                    <li>Get enough sleep</li>
+                                </ul>
+                                {% endif %}
+                            </div>
+                            <div> 
+                                {% if val == 'Diabetes' %}
+                                <h2>Necessary Medications:</h2>
+                                <ul>
+                                    <li>Insulin injections</li>
+                                    <li>Amylinomimetic drugs</li>
+                                    <li>Alpha-glucosidase inhibitors.</li>
+                                </ul>
+                                <div>
+                                    <p>Medical Reports: At least two or more diabetes-related autoantibodies are present in the blood.</p>
+                                    <p>"Please consult with our healthcare professional In your city".</p>
+                                    <p>"Keep smiling Everything will be good ".</p>
+                                </div>
+
+                               
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <!-- new section -->
+
+
+
+    <script src="static/script.js"></script>
+</body>
+</html>
